@@ -22,6 +22,7 @@
   <depend>std_srvs</depend>
   <depend>roscpp</depend>
   <depend>rosbag</depend>
+  <depend>rosbag_storage</depend>
   <depend>eigen_conversions</depend>
   <depend>tf2_ros</depend>
   <depend>libceres-dev</depend>
