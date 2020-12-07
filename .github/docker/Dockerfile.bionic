@@ -1,4 +1,4 @@
-FROM ros:kinetic
+FROM ros:melodic
 
 LABEL maintainer="bernd.pfrommer@gmail.com"
 LABEL version="1.0"
@@ -24,10 +24,3 @@ RUN apt-get -y install libceres-dev
 # some additional ROS packages
 #
 RUN apt-get -y install python-catkin-tools ros-${ROS_DISTRO}-image-transport ros-${ROS_DISTRO}-cv-bridge ros-${ROS_DISTRO}-sensor-msgs ros-${ROS_DISTRO}-std-msgs ros-${ROS_DISTRO}-rosbag ros-${ROS_DISTRO}-eigen-conversions ros-${ROS_DISTRO}-tf2-ros ros-${ROS_DISTRO}-image-geometry ros-${ROS_DISTRO}-tf2-geometry-msgs ros-${ROS_DISTRO}-message-generation ros-${ROS_DISTRO}-message-runtime ros-${ROS_DISTRO}-dynamic-reconfigure
-
-#
-# install newer c++ (needed for tagslam)
-#
-RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test
-RUN apt-get update
-RUN apt-get -y install gcc-7 g++-7
