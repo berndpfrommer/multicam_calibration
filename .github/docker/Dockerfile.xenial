@@ -7,5 +7,5 @@ LABEL description="custom Docker Image for building multicam_calibration"
 ARG DEBIAN_FRONTEND=noninteractive
 # Update Ubuntu Software repository
 RUN apt-get update
-RUN apt-get -y install git python-catkin-tools libceres-dev libopencv-dev ros-${ROS_DISTRO}-image-transport ros-${ROS_DISTRO}-cv-bridge ros-${ROS_DISTRO}-sensor-msgs ros-${ROS_DISTRO}-std-msgs ros-${ROS_DISTRO}-rosbag ros-${ROS_DISTRO}-eigen-conversions ros-${ROS_DISTRO}-tf2-ros ros-${ROS_DISTRO}-image-geometry
+RUN apt-get -y install git python-catkin-tools libceres-dev libopencv-dev ros-${ROS_DISTRO}-image-transport ros-${ROS_DISTRO}-cv-bridge ros-${ROS_DISTRO}-sensor-msgs ros-${ROS_DISTRO}-std-msgs ros-${ROS_DISTRO}-rosbag ros-${ROS_DISTRO}-eigen-conversions ros-${ROS_DISTRO}-tf2-ros ros-${ROS_DISTRO}-image-geometry ros-${ROS_DISTRO}-tf2-geometry-msgs ros-${ROS_DISTRO}-message-generation ros-${ROS_DISTRO}-message-runtime ros-${ROS_DISTRO}-dynamic-reconfigure
 
