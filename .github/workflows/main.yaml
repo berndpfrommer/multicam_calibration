@@ -3,8 +3,7 @@ name: build repo
 on:                                                                                         
  push:                                                                                      
     branches:                                                                               
-      - master                                                                              
-                                                                                            
+      - workflow_testing                                                                                            
 jobs:                                                                                       
   build_xenial:                                                                             
     runs-on: ubuntu-16.04                                                                   
