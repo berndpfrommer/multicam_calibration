@@ -1,0 +1,24 @@
+name: build multicam_calibration
+
+on:
+ push:
+    branches:
+      - workflow_testing
+
+jobs:
+  build_xenial:
+    runs-on: ubuntu-16.04
+    container:
+      # note: the git version on u18.04 is too old for the checkout action! 
+      image: berndpfrommer/xenial_ros:1
+    name: build multicam_calibration from source
+    steps:
+      # To use this repository's private action 
+      # you must check out the repository
+      - name: check out github repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: compile multicam_calibration ROS package
+        run: ./github/scripts/build_xenial.bash
+  
