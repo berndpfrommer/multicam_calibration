@@ -13,7 +13,7 @@ pushd ../catkin_ws
 
 git clone https://github.com/catkin/catkin_simple.git src/catkin_simple
 git clone --recursive https://github.com/versatran01/apriltag.git src/apriltag
-#ln -s $src_dir src/multicam_calibration
+ln -s $src_dir src/multicam_calibration
 
 catkin config -DCMAKE_BUILD_TYPE=RelWithDebInfo
 
