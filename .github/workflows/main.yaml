@@ -20,7 +20,5 @@ jobs:
         with:
           fetch-depth: 0
       - name: compile multicam_calibration ROS package
-       run: |
-         git checkout workflow_testing
-         ./github/scripts/build_xenial.bash
+        run: git checkout workflow_testing && ./github/scripts/build_xenial.bash
   
