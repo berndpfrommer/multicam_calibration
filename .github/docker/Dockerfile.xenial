@@ -7,5 +7,5 @@ LABEL description="custom Docker Image for building multicam_calibration"
 ARG DEBIAN_FRONTEND=noninteractive
 # Update Ubuntu Software repository
 RUN apt-get update
-RUN apt-get -y install git python-catkin-tools libceres-dev
+RUN apt-get -y install git python-catkin-tools libceres-dev libopencv-dev
 
